@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+/* TEKSTIT */
+h1 {
+    font-family: 'Lexend Exa', sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 100px;
+    line-height: 1.4;
+    font-size: 50px;
+}
+
+h2 {
+    padding-top: 50px;
+    font-family: 'Lexend Exa', sans-serif;
+    margin-left: 150px;
+    margin-right: 150px;
+   font-size: 30px;
+   }
+
+h3 {
+    font-family: 'Lexend Exa', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+p {
+ font-family: 'Roboto', sans-serif;
+ margin-left: 150px;
+ margin-right: 150px;
+ font-size: 16px;
+ line-height: 1.8;
+}
+
+/* NAVIGOINTI */
+  .navigation {
+    background-color: #008669;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .yksi, .kaksi, .kolme {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(250, 250, 250);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .yksi {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .kaksi {opacity: 0;}
+  
+  .change .kolme {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+
+  .laatikko{
+    background-color: #008669;
+    width: 250px;
+    height: 150px;
+    margin-top: 50px;
+
+  }
+  .laatikot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .unikko {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  /* FOOTER */
+  .footer-box {
+    background-color: #FA5D63;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .footer-box img {
+    margin: 5px;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .icons img {
+    margin-right: 100px;
+  }
