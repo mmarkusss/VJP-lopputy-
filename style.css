@@ -5,6 +5,7 @@ html,
 
 body {
   scroll-behavior: smooth;
+  margin: 0vw;
 }
 
 body {
@@ -125,6 +126,14 @@ html {
   font-size: 40px;
 }
 
+.otsikko2 {
+  padding-left: 15vw;
+  padding-top: 0vw;
+  padding-right: 0wv;
+  font-family: 'Lexend Exa', sans-serif;
+  font-size: 40px;
+}
+
 .p1 {
   padding-left: 10vw;
   padding-right: 10vw;
@@ -165,6 +174,16 @@ h2 {
   justify-content: center;
 }
 
+@media (max-width: 800px){
+  .flex{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .flex-container {
   display: flex;
   height: 200px;
@@ -195,13 +214,15 @@ h2 {
 }
 
 
-
-.tekstitJaKuva otsikko1{
+.tekstitJaKuva {
   display: flex;
   flex-direction: row;
+  margin: 0vw;
 }
 
 .kuvakollaasi{
   display: flex;
   flex-direction: row;
+  margin: 0vw;
 }
+
