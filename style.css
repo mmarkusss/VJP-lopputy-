@@ -30,6 +30,7 @@ body {
   margin: 0px;
   text-align: left;
   word-spacing: 80px;
+  font-family: 'Lexend Exa', sans-serif;
 }
 
 html {
@@ -40,6 +41,7 @@ html {
 .p {
   margin: 0px;
   padding: 0px;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* The sidebar menu */
@@ -119,7 +121,7 @@ html {
 .otsikko1 {
   padding-left: 10vw;
   padding-top: 15vw;
-  font-family: "Lexend Exa";
+  font-family: 'Lexend Exa', sans-serif;
   font-size: 40px;
 }
 
@@ -127,19 +129,21 @@ html {
   padding-left: 10vw;
   padding-right: 10vw;
   max-width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .p2 {
   padding-left: 10vw;
   max-width: 40%;
   padding-bottom: 20vw;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
   padding-top: 10vw;
   padding-left: 10vw;
   font-size: 35px;
-  font-family: "Lexend Exa";
+  font-family: 'Lexend Exa', sans-serif;
 }
 
 .alaboksi {
