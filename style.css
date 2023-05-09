@@ -46,7 +46,7 @@ html {
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #fa5d63; /* Black*/
+  background-color: white; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -57,14 +57,14 @@ html {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #ffffff;
+  color: black;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #008669;
+  color: #fa5d63;
 }
 
 /* Position and style the close button (top right corner) */
@@ -80,21 +80,23 @@ html {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #008669;
+  background-color: black;
   color: white;
   padding: 20px 30px;
   border: none;
 }
 
 .openbtn:hover {
-  background-color: #fa5d63;
+  background-color: white;
+  color: black;
+  transition: 0.5s;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left 0.5s; /* If you want a transition effect */
   padding: 0px;
-  background-color: #008669;
+  background-color: black;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -126,6 +128,7 @@ html {
 .p2 {
   padding-left: 10vw;
   max-width: 40%;
+  padding-bottom: 20vw;
 }
 
 h2 {
