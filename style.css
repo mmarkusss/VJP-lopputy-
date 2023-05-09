@@ -213,16 +213,29 @@ h2 {
   margin-left: 110px;
 }
 
+.kuvakollaasi{
+  display: flex;
+  flex-direction: row;
+  margin: 0vw;
+  margin-top: 5vw;
+  margin-left: 10vw;
+}
 
 .tekstitJaKuva {
   display: flex;
   flex-direction: row;
   margin: 0vw;
+  width: 100vw;
+
 }
 
-.kuvakollaasi{
-  display: flex;
-  flex-direction: row;
-  margin: 0vw;
+@media (max-width: 850px){
+  .tekstitJaKuva{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
