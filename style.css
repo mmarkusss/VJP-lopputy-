@@ -71,7 +71,7 @@ html {
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #fa5d63;
+  color: #008669;
 }
 
 /* Position and style the close button (top right corner) */
@@ -160,7 +160,7 @@ h2 {
 }
 
 .alaboksi {
-  background-color: #fa5d63;
+  background-color: #008669;
   height: 200px;
   margin-top: 200px;
 
