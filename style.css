@@ -161,7 +161,7 @@ h2 {
 
 .alaboksi {
   background-color: #008669;
-  height: 200px;
+  height: 350px;
   margin-top: 200px;
 
   padding-bottom: 0px;
@@ -196,15 +196,14 @@ h2 {
 .ikonit{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  padding-top: 55px;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 
-.ikonit img{
-  padding-left: 10vw;
-  padding-right: 10vw;
-  padding-top: 5vw;
-}
+
 
 .unikko{
   margin-top: 10px;
