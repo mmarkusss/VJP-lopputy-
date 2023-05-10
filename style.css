@@ -190,7 +190,6 @@ h2 {
   width: 25vw;
   align-items: center;
   margin: 30px;
-  background-color: rgb(182, 182, 182);
   justify-content: center;
 }
 
@@ -243,3 +242,28 @@ h2 {
   margin-left: 150px;
 }
 
+.boksit {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 800px){
+  .boksi{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.boksi {
+  display: flex;
+  height: 200px;
+  width: 25vw;
+  align-items: center;
+  margin: 30px;
+  justify-content: center;
+}
