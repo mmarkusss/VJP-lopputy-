@@ -146,7 +146,7 @@ html {
 .p2 {
   padding-left: 10vw;
   max-width: 60%;
-  padding-bottom: 20vw;
+  padding-bottom: 5vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8;
   font-size: 16px;
@@ -237,5 +237,10 @@ h2 {
     justify-content: center;
     align-items: center;
   }
+}
+
+.podi{
+  margin-left: 150px;
+  background-color: #008669;
 }
 
