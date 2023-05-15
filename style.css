@@ -139,7 +139,7 @@ html {
   padding-right: 10vw;
   max-width: 100%;
   font-family: 'Roboto', sans-serif;
-  font-size: 25px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -149,7 +149,7 @@ html {
   padding-bottom: 5vw;
   font-family: 'Roboto', sans-serif;
   line-height: 1.8;
-  font-size: 23px;
+  font-size: 16px;
 }
 
 h2 {
@@ -308,4 +308,11 @@ h2 {
 .nuoli {
   margin-left: 150px;
   
+}
+
+.mariala {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
 }
