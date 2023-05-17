@@ -99,6 +99,10 @@ html {
   transition: 0.5s;
 }
 
+.mariylös{
+
+}
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left 0.5s; /* If you want a transition effect */
@@ -175,16 +179,6 @@ h2 {
   padding-bottom: 4vw;
 }
 
-@media (max-width: 800px){
-  .flex{
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 .flex-container {
   display: flex;
   height: 200px;
@@ -194,12 +188,34 @@ h2 {
   justify-content: center;
 }
 
+@media (max-width: 1150px){
+  .flex{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-container {
+    display: flex;
+    height: 200px;
+    width: 25vw;
+    align-items: center;
+    margin: 30px;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+}
+
+
 .ikonit{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 55px;
+  padding-top: 80px;
   padding-left: 15vw;
   padding-right: 15vw;
 }
