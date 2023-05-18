@@ -343,3 +343,42 @@ h2 {
   align-items: center;
   margin-top: 60px;
 }
+
+
+
+.container{
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 30vw;
+
+  display: flex;
+}
+
+
+#vuosi1{
+
+
+  font-size: 4vw;
+}
+
+#vuosi2{
+  position: absolute;
+  font-size: 4vw;
+  /* transform: translate(-50%, -50%) */
+}
+#vuosi3{
+  position: absolute;
+  font-size: 4vw;
+  /* transform: translate(-50%, -50%) */
+}
+#vuosi4{
+  position: absolute;
+  font-size: 4vw;
+  /* transform: translate(-50%, -50%) */
+}
+#vuosi5{
+  position: absolute;
+  font-size: 4vw;
+  /* transform: translate(-50%, -50%) */
+}

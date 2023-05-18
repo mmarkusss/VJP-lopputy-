@@ -72,9 +72,80 @@
       Tarkastelemalla näitä aikansa kehoihanteita 
       pyrimme kyseenalaistamaan lukijoidemme preferenssejä ja ihanteita, ja toivomme tämän kautta että he voivat nähdä oman kehonsa kauniina näiden esimerkkien rinnalla. Kaikki kehot ovat uniikkeja ja juuri se tekee kehostasi kauniin.
     </p>
+    
     <div class="unikko">
       <img src="Group 13.png" alt="Unikko">
     </div>
+
+
+    <body>
+      <div class="container">
+        <div>
+          <img src="Group 13.png" alt="unikko" />
+          <button id="vuosi1">1500</button>
+          <button id="vuosi2">1800</button>
+          <button class="vuosi3">3000</button>
+          <button class="vuosi4">4000</button>
+          <button class="vuosi5">2000</button>
+        </div>
+        <div>
+
+          <img id="katoava1" src="50s.png" alt="unikko" class="hidden" />
+          <style>
+            .hidden {
+              display: none;
+            }
+            .visible {
+              display: block;
+            }
+          </style>
+
+
+          <img id="katoava2" src="80s.png" alt="unikko" class="hidden" />
+          <style>
+            .hidden {
+              display: none;
+            }
+            .visible {
+              display: block;
+            }
+          </style>
+
+          <img id="katoava5" src="00s.png" alt="unikko" class="hidden" />
+          <style>
+            .hidden {
+              display: none;
+            }
+            .visible {
+              display: block;
+            }
+          </style>
+        </div>
+      </div>
+      <script>
+        const showImageButt = document.getElementById("vuosi1");
+        const myIma = document.getElementById("katoava1");
+        showImageButto.addEventListener("click", () => {
+          myImag.classList.toggle("visible");
+  });
+</script>
+      <script>
+        const showImageButton = document.getElementById("vuosi2");
+        const myImage = document.getElementById("katoava2");
+        showImageButton.addEventListener("click", () => {
+          myImage.classList.toggle("visible");
+        });
+      </script>
+
+      <script>
+        const showImageButto = document.getElementById("vuosi5");
+        const myImag = document.getElementById("katoava5");
+        showImageButto.addEventListener("click", () => {
+          myImag.classList.toggle("visible");
+  });
+</script>
+
+    </body>
 
 
     <div class="alaboksi">
