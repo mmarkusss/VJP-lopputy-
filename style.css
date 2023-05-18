@@ -363,22 +363,26 @@ h2 {
 }
 
 #vuosi2{
-  position: absolute;
+
   font-size: 4vw;
   /* transform: translate(-50%, -50%) */
 }
 #vuosi3{
-  position: absolute;
+ 
   font-size: 4vw;
   /* transform: translate(-50%, -50%) */
 }
 #vuosi4{
-  position: absolute;
   font-size: 4vw;
   /* transform: translate(-50%, -50%) */
 }
 #vuosi5{
-  position: absolute;
+
   font-size: 4vw;
   /* transform: translate(-50%, -50%) */
+}
+
+#musta{
+  color: black;
+  font-size: 20px;
 }

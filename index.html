@@ -81,12 +81,12 @@
     <body>
       <div class="container">
         <div>
-          <img src="Group 13.png" alt="unikko" />
+          
           <button id="vuosi1">1500</button>
+          <button id="vuosi3">1700</button>
           <button id="vuosi2">1800</button>
-          <button id="vuosi3">3000</button>
-          <button id="vuosi4">4000</button>
           <button id="vuosi5">2000</button>
+          <button id="vuosi4">2010</button>
         </div>
         <div>
 
@@ -100,6 +100,17 @@
             }
           </style>
 
+          <img id="katoava3" src="70s.png" alt="unikko" class="hidden" />
+          <style>
+            .hidden {
+              display: none;
+            }
+            .visible {
+              display: block;
+            }
+          </style>
+         
+
 
           <img id="katoava2" src="80s.png" alt="unikko" class="hidden" />
           <style>
@@ -110,8 +121,24 @@
               display: block;
             }
           </style>
+         
 
-          <img id="katoava5" src="00s.png" alt="unikko" class="hidden" />
+          <img id="katoava5" src="00s.png"  alt="unikko" class="hidden" />
+          <style>
+            .hidden {
+              display: none;
+            }
+            .visible {
+              display: block;
+              
+            }
+          </style>
+          <p class="hidden" id="musta">
+            2000-luvun alussa muodissa oli “heroin chic” -kehotyyppi. 
+            Keho oli todella laiha. Ihanteena tuolloin oli supermalli Kate Moss
+          </p>
+
+          <img id="katoava4" src="2010.png" alt="unikko" class="hidden" />
           <style>
             .hidden {
               display: none;
@@ -120,6 +147,7 @@
               display: block;
             }
           </style>
+
         </div>
       </div>
       <script>
@@ -127,13 +155,22 @@
         const myIma = document.getElementById("katoava1");
         showImageButt.addEventListener("click", () => {
           myIma.classList.toggle("visible");
-  });
-</script>
+        });
+      </script>
+      
       <script>
-        const showImageButton = document.getElementById("vuosi2");
-        const myImage = document.getElementById("katoava2");
-        showImageButton.addEventListener("click", () => {
-          myImage.classList.toggle("visible");
+        const showImageBut = document.getElementById("vuosi2");
+        const myI = document.getElementById("katoava2");
+        showImageBut.addEventListener("click", () => {
+          myI.classList.toggle("visible");
+        });
+      </script>
+
+      <script>
+        const showImageBu = document.getElementById("vuosi3");
+        const myIh = document.getElementById("katoava3");
+        showImageBu.addEventListener("click", () => {
+          myIh.classList.toggle("visible");
         });
       </script>
 
@@ -142,6 +179,13 @@
         const myImag = document.getElementById("katoava5");
         showImageButto.addEventListener("click", () => {
           myImag.classList.toggle("visible");
+  });
+</script>
+<script>
+        const showImage = document.getElementById("vuosi4");
+        const m = document.getElementById("katoava4");
+        showImage.addEventListener("click", () => {
+          m.classList.toggle("visible");
   });
 </script>
 
