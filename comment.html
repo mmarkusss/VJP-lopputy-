@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kommentointi</title>
+  <style>
+
+
+    .comment {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin-left: 150px;
+    }
+
+    .comment-input{
+        margin-left: 150px;
+    }
+
+    .like-button {
+      color: blue;
+      cursor: pointer;
+    }
+    .unlike-button {
+      color: red;
+      cursor: pointer;
+    }
+    .delete-button {
+      color: gray;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js"></script>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lexend Exa"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="index.html">Etusivu</a> <br>
+      <a href="blog.html" target="_top">Blogi</a> <br>
+      <a href="podcast.html" target="_top">Podcast</a> <br>
+      <a href="about-us.html" target="_top">Meistä</a> <br>
+      <a href="comment.html" target="_top">Kommentoi</a> <br>
+    </div>
+    
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+<div class="kommentointi">
+    <h1>Oletko itse kokenut jotakin vastaavaa? Lisää kommentti ja lue muiden kommentteja.</h1>
+    <div id="comments"></div>
+  
+    <h3>Lisää kommentti. Voit myös tykätä muiden kommenteista.</h3>
+    <textarea id="comment-input" rows="4" cols="50"></textarea>
+    <br>
+    <button onclick="addComment()">Lisää kommentti</button>
+
+</div>
+  
+    <div class="alaboksi">
+      <div class="ikonit">
+        <div>
+          <a href="https://www.instagram.com">
+            <img src="icon _instagram_.png" alt="insta">
+          </a>
+        </div>
+        <div>
+          <img src="icon _mail_.png" alt="mail">
+        </div>
+        <div>
+          <a href="https://www.tiktok.com/fi-FI/">
+            <img src="icon _tiktok_.png" alt="tiktok">
+          </a>
+        </div>
+        <div>
+          <a href="https://open.spotify.com/genre/podcasts-web">
+            <img src="icon _headset help_.png" alt="podcast">
+          </a>
+        </div>
+      </div>
+      <div class="mariala">
+        <img src="marimekko-alas.png" alt="marimekon logo">
+      </div>
+  
+  <script>
+    // Array kommentien varastoimiseen
+    let comments = [];
+
+    // Funktio kommentin lisäämiseen
+    function addComment() {
+      const commentInput = document.getElementById('comment-input');
+      const commentText = commentInput.value.trim();
+
+      if (commentText !== '') {
+        const comment = {
+          id: Date.now(),
+          text: commentText,
+          likes: 0,
+          liked: false
+        };
+
+        comments.push(comment);
+        commentInput.value = '';
+
+        displayComments();
+      }
+    }
+
+    // Funktio tykkäyksiin
+    function likeComment(comment) {
+      comment.likes++;
+      comment.liked = true;
+      displayComments();
+    }
+
+    // Funktio tykkäyksien poistoon
+    function unlikeComment(comment) {
+      comment.likes--;
+      comment.liked = false;
+      displayComments();
+    }
+
+    // Funktio kommentin poistamiseen
+    function deleteComment(comment) {
+      comments = comments.filter((c) => c.id !== comment.id);
+      displayComments();
+    }
+
+    // Funktio kommentien näyttämiseen
+    function displayComments() {
+      const commentsContainer = document.getElementById('comments');
+      commentsContainer.innerHTML = '';
+
+      comments.forEach((comment, index) => {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+
+        const commentText = document.createElement('p');
+        commentText.textContent = comment.text;
+        commentElement.appendChild(commentText);
+
+        const likeButton = document.createElement('span');
+        likeButton.classList.add('like-button');
+
+        const unlikeButton = document.createElement('span');
+        unlikeButton.classList.add('unlike-button');
+
+        const deleteButton = document.createElement('span');
+        deleteButton.classList.add('delete-button');
+        deleteButton.textContent = "  Poista kommentti";
+
+        if (comment.liked) {
+          likeButton.innerHTML = `&#128077; ${comment.likes}`;
+          unlikeButton.innerHTML =   " Poista tykkäys";
+          likeButton.onclick = () => unlikeComment(comment);
+          unlikeButton.onclick = () => unlikeComment(comment);
+        } else {
+          likeButton.innerHTML = `&#128077; ${comment.likes}`;
+          unlikeButton.innerHTML = ``;
+          likeButton.onclick = () => likeComment(comment);
+        }
+
+        deleteButton.onclick = () => deleteComment(comment);
+
+        commentElement.appendChild(likeButton);
+        commentElement.appendChild(unlikeButton);
+        commentElement.appendChild(deleteButton);
+
+        commentsContainer.appendChild(commentElement);
+      });
+    }
+  </script>
+</body>
+</html>
