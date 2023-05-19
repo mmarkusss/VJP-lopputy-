@@ -419,3 +419,27 @@ h2 {
   padding-bottom: 2vw;
   padding-right: 20vw;
 }
+
+.comment {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-left: 150px;
+}
+
+.comment-input{
+    margin-left: 150px;
+}
+
+.like-button {
+  color: blue;
+  cursor: pointer;
+}
+.unlike-button {
+  color: red;
+  cursor: pointer;
+}
+.delete-button {
+  color: gray;
+  cursor: pointer;
+}
