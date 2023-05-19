@@ -45,6 +45,130 @@
         <br> Kehonkuvan häiriöt ovat vakava ongelma nuorille, ja se vaatii meiltä kaikilta yhteistyötä sen ratkaisemiseksi. On tärkeää, että nuoret ymmärtävät, että he ovat arvokkaita juuri sellaisina kuin ovat, ja että heidän kehonsa ansaitsevat arvostusta ja rakkautta.
       </p>
 
+      <!DOCTYPE html>
+<html>
+<head>
+  <title>Kommentointi</title>
+  <style>
+    .comment {
+      margin-bottom: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    .like-button {
+      color: blue;
+      cursor: pointer;
+    }
+    .unlike-button {
+      color: red;
+      cursor: pointer;
+    }
+    .delete-button {
+      color: gray;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Oletko itse kokenut jotakin vastaavaa? Lisää kommentti ja lue muiden kommentteja.</h1>
+  <div id="comments"></div>
+
+  <h2>Lisää kommenti. Voit myös tykätä muiden kommenteista.</h2>
+  <textarea id="comment-input" rows="4" cols="50"></textarea>
+  <br>
+  <button onclick="addComment()">Lisää kommentti</button>
+
+  <script>
+    // Array kommentien varastoimiseen
+    let comments = [];
+
+    // Funktio kommentin lisäämiseen
+    function addComment() {
+      const commentInput = document.getElementById('comment-input');
+      const commentText = commentInput.value.trim();
+
+      if (commentText !== '') {
+        const comment = {
+          id: Date.now(),
+          text: commentText,
+          likes: 0,
+          liked: false
+        };
+
+        comments.push(comment);
+        commentInput.value = '';
+
+        displayComments();
+      }
+    }
+
+    // Funktio tykkäyksiin
+    function likeComment(comment) {
+      comment.likes++;
+      comment.liked = true;
+      displayComments();
+    }
+
+    // Funktio tykkäyksien poistoon
+    function unlikeComment(comment) {
+      comment.likes--;
+      comment.liked = false;
+      displayComments();
+    }
+
+    // Funktio kommentin poistamiseen
+    function deleteComment(comment) {
+      comments = comments.filter((c) => c.id !== comment.id);
+      displayComments();
+    }
+
+    // Funktio kommentien näyttämiseen
+    function displayComments() {
+      const commentsContainer = document.getElementById('comments');
+      commentsContainer.innerHTML = '';
+
+      comments.forEach((comment, index) => {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+
+        const commentText = document.createElement('p');
+        commentText.textContent = comment.text;
+        commentElement.appendChild(commentText);
+
+        const likeButton = document.createElement('span');
+        likeButton.classList.add('like-button');
+
+        const unlikeButton = document.createElement('span');
+        unlikeButton.classList.add('unlike-button');
+
+        const deleteButton = document.createElement('span');
+        deleteButton.classList.add('delete-button');
+        deleteButton.textContent =   "Poista kommentti";
+
+        if (comment.liked) {
+          likeButton.innerHTML = "👍 ${comment.likes}";
+          unlikeButton.innerHTML =   "Poista tykkäys";
+          likeButton.onclick = () => unlikeComment(comment);
+          unlikeButton.onclick = () => unlikeComment(comment);
+        } else {
+          likeButton.innerHTML = "👍 ${comment.likes}";
+          unlikeButton.innerHTML = ``;
+          likeButton.onclick = () => likeComment(comment);
+        }
+
+        deleteButton.onclick = () => deleteComment(comment);
+
+        commentElement.appendChild(likeButton);
+        commentElement.appendChild(unlikeButton);
+        commentElement.appendChild(deleteButton);
+
+        commentsContainer.appendChild(commentElement);
+      });
+    }
+  </script>
+</body>
+</html>
+
       <div class="nuoli">
           <a href="/blog.html">
             <img src="Arrow 1.png" alt="Nuoli">
