@@ -69,15 +69,16 @@
     }
   </style>
 </head>
-<body>
-  <h1>Oletko itse kokenut jotakin vastaavaa? Lisää kommentti ja lue muiden kommentteja.</h1>
+<body class="kommentointi">
+  <h1 class="kk">Oletko itse kokenut jotakin vastaavaa? Lisää kommentti ja lue muiden kommentteja.</h1>
   <div id="comments"></div>
 
   <h2>Lisää kommenti. Voit myös tykätä muiden kommenteista.</h2>
+  <div class="kommen">
   <textarea id="comment-input" rows="4" cols="50"></textarea>
   <br>
   <button onclick="addComment()">Lisää kommentti</button>
-
+  </div>
   <script>
     // Array kommentien varastoimiseen
     let comments = [];
@@ -146,12 +147,12 @@
         deleteButton.textContent =   "Poista kommentti";
 
         if (comment.liked) {
-          likeButton.innerHTML = "👍 ${comment.likes}";
+          
           unlikeButton.innerHTML =   "Poista tykkäys";
           likeButton.onclick = () => unlikeComment(comment);
           unlikeButton.onclick = () => unlikeComment(comment);
         } else {
-          likeButton.innerHTML = "👍 ${comment.likes}";
+          
           unlikeButton.innerHTML = ``;
           likeButton.onclick = () => likeComment(comment);
         }
